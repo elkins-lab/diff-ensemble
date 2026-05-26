@@ -1,0 +1,39 @@
+[tool.mypy]
+ignore_missing_imports = true
+check_untyped_defs = true
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N"]
+ignore = ["N806", "N803"] # Allow non-lowercase variables (common in math/physics)
+
+[project]
+name = "ensemble-predictor"
+version = "0.1.0"
+description = "VAE-based structural ensemble prediction for disordered proteins"
+authors = [{name = "George Elkins"}]
+license = {text = "MIT"}
+dependencies = [
+    "jax",
+    "jaxlib",
+    "flax",
+    "optax",
+    "numpy",
+    "diff-biophys",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "ruff",
+    "mypy",
+    "pre-commit",
+]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+]
