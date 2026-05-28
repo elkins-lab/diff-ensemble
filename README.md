@@ -33,6 +33,13 @@ DiffEnsemble is a JAX-powered framework for predicting structural ensembles of I
 pip install diff-ensemble
 ```
 
+## 📖 Tutorials
+
+Get started immediately with our interactive Jupyter notebooks:
+
+*   **[Quick Start: Differentiable IDP Ensemble Prediction](examples/quickstart_ensemble.ipynb)**: Train a VAE to predict structural ensembles constrained by SAXS data.
+    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/elkins/diff-ensemble/blob/main/examples/quickstart_ensemble.ipynb)
+
 ## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
