@@ -59,6 +59,7 @@ jobs:
                 fi
         pip install -e ".[dev]"
 
+      shell: bash
     - name: Lint with ruff
       run: ruff check .
 
