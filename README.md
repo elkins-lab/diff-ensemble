@@ -107,7 +107,7 @@ DiffEnsemble depends on and integrates with:
 - [synth-pdb](https://github.com/elkins/synth-pdb) — Synthetic structure generation for training data
 - [synth-nmr](https://github.com/elkins/synth-nmr) — NMR observables for experimental targets
 - [synth-saxs](https://github.com/elkins/synth-saxs) — SAXS profile simulation
-- [TorsionTuner](https://github.com/elkins/TorsionTuner) — Single-structure refinement counterpart
+- [torsion-tuner](https://github.com/elkins/torsion-tuner) — Single-structure refinement counterpart
 
 ---
 
