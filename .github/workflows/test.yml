@@ -83,8 +83,8 @@ jobs:
     - name: Lint with ruff
       run: ruff check .
 
-    - name: Check formatting (Black)
-      run: black --check .
+    - name: Check formatting (Ruff)
+      run: ruff format --check .
 
     - name: Static type check (Mypy)
       run: mypy . --explicit-package-bases
