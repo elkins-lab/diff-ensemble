@@ -1,8 +1,8 @@
 # 🧬 DiffEnsemble
 
-[![Tests](https://github.com/elkins/diff-ensemble/actions/workflows/test.yml/badge.svg)](https://github.com/elkins/diff-ensemble/actions/workflows/test.yml)
-[![Docs](https://github.com/elkins/diff-ensemble/actions/workflows/docs.yml/badge.svg)](https://elkins-lab.github.io/diff-ensemble/)
-[![codecov](https://codecov.io/gh/elkins/diff-ensemble/branch/main/graph/badge.svg)](https://codecov.io/gh/elkins/diff-ensemble)
+[![Tests](https://github.com/elkins-lab/diff-ensemble/actions/workflows/test.yml/badge.svg)](https://github.com/elkins-lab/diff-ensemble/actions/workflows/test.yml)
+[![Docs](https://github.com/elkins-lab/diff-ensemble/actions/workflows/docs.yml/badge.svg)](https://elkins-lab.github.io/diff-ensemble/)
+[![codecov](https://codecov.io/gh/elkins-lab/diff-ensemble/branch/main/graph/badge.svg)](https://codecov.io/gh/elkins-lab/diff-ensemble)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python versions](https://img.shields.io/pypi/pyversions/diff-ensemble)](https://pypi.org/project/diff-ensemble/)
 [![JAX](https://img.shields.io/badge/backend-JAX-9cf.svg)](https://github.com/google/jax)
@@ -104,11 +104,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 DiffEnsemble depends on and integrates with:
 
-- [diff-biophys](https://github.com/elkins/diff-biophys) — Differentiable JAX kernels for SAXS/NMR (core dependency)
-- [synth-pdb](https://github.com/elkins/synth-pdb) — Synthetic structure generation for training data
-- [synth-nmr](https://github.com/elkins/synth-nmr) — NMR observables for experimental targets
-- [synth-saxs](https://github.com/elkins/synth-saxs) — SAXS profile simulation
-- [torsion-tuner](https://github.com/elkins/torsion-tuner) — Single-structure refinement counterpart
+- [diff-biophys](https://github.com/elkins-lab/diff-biophys) — Differentiable JAX kernels for SAXS/NMR (core dependency)
+- [synth-pdb](https://github.com/elkins-lab/synth-pdb) — Synthetic structure generation for training data
+- [synth-nmr](https://github.com/elkins-lab/synth-nmr) — NMR observables for experimental targets
+- [synth-saxs](https://github.com/elkins-lab/synth-saxs) — SAXS profile simulation
+- [torsion-tuner](https://github.com/elkins-lab/torsion-tuner) — Single-structure refinement counterpart
 
 ---
 
@@ -119,8 +119,8 @@ DiffEnsemble depends on and integrates with:
   author  = {Elkins, George},
   title   = {DiffEnsemble: Differentiable structural ensemble prediction for IDPs},
   year    = {2026},
-  url     = {https://github.com/elkins/diff-ensemble},
-  version = {0.1.0}
+  url     = {https://github.com/elkins-lab/diff-ensemble},
+  version = {0.1.2}
 }
 ```
 
