@@ -33,15 +33,15 @@ def save_ensemble_to_pdb(
         res_indices.extend([i + 1] * 3)
 
     # Build biotite AtomArrayStack
-    stack = struc.AtomArrayStack(ensemble_size, n_atoms)
+    stack: struc.AtomArrayStack = struc.AtomArrayStack(ensemble_size, n_atoms)
     stack.coord = coords
 
     # Fill in metadata for the first model (metadata is shared in the stack)
-    stack.chain_id = np.array(["A"] * n_atoms)
-    stack.res_id = np.array(res_indices)
-    stack.res_name = np.array([res_names[i - 1] for i in res_indices])
-    stack.atom_name = np.array(atom_names)
-    stack.element = np.array([name[0] for name in atom_names])  # N, C, C
+    stack.chain_id = np.array(["A"] * n_atoms)  # type: ignore[assignment]
+    stack.res_id = np.array(res_indices)  # type: ignore[assignment]
+    stack.res_name = np.array([res_names[i - 1] for i in res_indices])  # type: ignore[assignment]
+    stack.atom_name = np.array(atom_names)  # type: ignore[assignment]
+    stack.element = np.array([name[0] for name in atom_names])  # type: ignore[assignment]
 
     # Save to file
     pdb_file = pdb.PDBFile()

@@ -1,14 +1,15 @@
 import jax
 import jax.numpy as jnp
+import pytest
 
 from diff_ensemble.model import EnsembleVAE
 from diff_ensemble.train import create_train_state, train_step
 
 
-def test_initialization():
-    seq_len = 10
-    latent_dim = 16
-    ensemble_size = 5
+@pytest.mark.parametrize("seq_len", [5, 10])
+@pytest.mark.parametrize("latent_dim", [8, 16])
+@pytest.mark.parametrize("ensemble_size", [1, 5])
+def test_initialization(seq_len, latent_dim, ensemble_size):
     model = EnsembleVAE(seq_len=seq_len, latent_dim=latent_dim, ensemble_size=ensemble_size)
 
     rng = jax.random.PRNGKey(0)
@@ -18,10 +19,10 @@ def test_initialization():
     assert state.params is not None
 
 
-def test_gradient_flow():
-    seq_len = 10
-    latent_dim = 16
-    ensemble_size = 5
+@pytest.mark.parametrize("seq_len", [5, 10])
+@pytest.mark.parametrize("latent_dim", [8, 16])
+@pytest.mark.parametrize("ensemble_size", [1, 5])
+def test_gradient_flow(seq_len, latent_dim, ensemble_size):
     model = EnsembleVAE(seq_len=seq_len, latent_dim=latent_dim, ensemble_size=ensemble_size)
 
     rng = jax.random.PRNGKey(0)

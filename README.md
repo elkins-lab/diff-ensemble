@@ -120,7 +120,7 @@ DiffEnsemble depends on and integrates with:
   title   = {DiffEnsemble: Differentiable structural ensemble prediction for IDPs},
   year    = {2026},
   url     = {https://github.com/elkins-lab/diff-ensemble},
-  version = {0.1.2}
+  version = {0.1.3}
 }
 ```
 

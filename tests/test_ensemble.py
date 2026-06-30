@@ -40,10 +40,10 @@ class TestPredict:
         coords = predictor.predict(features, rng)
         assert coords.shape == (ENSEMBLE_SIZE, SEQ_LEN * 3, 3)
 
-    def test_n_samples_override_shape(self, predictor_setup):
+    @pytest.mark.parametrize("n", [1, 12, 100])
+    def test_n_samples_override_shape(self, predictor_setup, n):
         """n_samples != ensemble_size should produce the requested number of models."""
         predictor, features, rng = predictor_setup
-        n = 12
         coords = predictor.predict(features, rng, n_samples=n)
         assert coords.shape == (n, SEQ_LEN * 3, 3)
 

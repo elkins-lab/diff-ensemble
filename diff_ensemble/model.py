@@ -34,6 +34,10 @@ def build_backbone_coords(torsions: jnp.ndarray) -> jnp.ndarray:
         ``(ensemble_size, seq_len * 3, 3)`` Cartesian coordinates for all
         backbone heavy atoms (N, Cα, C) in each model of the ensemble.
     """
+    if torsions.ndim != 3 or torsions.shape[-1] != 2:
+        raise ValueError(
+            f"Expected torsions shape (ensemble_size, seq_len, 2), got {torsions.shape}"
+        )
     ensemble_size, n_res, _ = torsions.shape
 
     # Pre-compute the *static* geometry arrays once, outside vmap.
@@ -82,6 +86,8 @@ class Encoder(nn.Module):
         Returns:
             Tuple of ``(mean, logvar)`` each shaped ``(batch_size, latent_dim)``.
         """
+        if x.ndim != 3:
+            raise ValueError(f"Expected x shape (batch_size, seq_len, features), got {x.shape}")
         batch_size = x.shape[0]
         x = x.reshape((batch_size, -1))
 
@@ -116,6 +122,8 @@ class Decoder(nn.Module):
         Returns:
             ``(ensemble_size, seq_len, 2)`` torsion angles in radians.
         """
+        if z.ndim != 2:
+            raise ValueError(f"Expected z shape (ensemble_size, latent_dim), got {z.shape}")
         ensemble_size = z.shape[0]
 
         x = nn.Dense(self.hidden_dim)(z)
