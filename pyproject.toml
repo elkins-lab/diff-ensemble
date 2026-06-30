@@ -111,6 +111,8 @@ dependencies = [
 dev = [
     "pytest",
     "pytest-cov",
+    "hypothesis",
+    "nbformat",
     "ruff",
     "mypy",
     "pre-commit",

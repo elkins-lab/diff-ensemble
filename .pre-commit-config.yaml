@@ -30,3 +30,5 @@ repos:
           - diff-biophys
           - scipy
           - pytest
+          - hypothesis
+          - nbformat
